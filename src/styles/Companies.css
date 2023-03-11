@@ -1,0 +1,42 @@
+.companiesTitle {
+    margin-top: 20px;
+    color: black;
+    padding-bottom: 30px;
+    font-size: 2rem;
+}
+.companiesDesc{
+    color: black;
+    text-align: center;
+    font-size: 1.2rem;
+    width: 50%;
+    padding-bottom: 50px;
+}
+.companiesContainer{
+    margin-top: 10vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.imagesCompaniesContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+.company {
+    width: 20%;
+    margin: 5px;
+    border-radius: 3px;
+}
+@media (max-width:1000px) {
+    .companiesDesc{
+        width: 70%;
+    }
+    .company {
+        width: 45%;
+    }
+}

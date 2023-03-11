@@ -1,0 +1,150 @@
+.form {
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#contact{
+    height: 15vh;
+}
+.flexRow {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+.formTitle{
+    padding-bottom: 30px;
+    color: black;
+    font-size: 2rem;
+}
+.formDesc {
+    color: black;
+    font-weight: 300;
+    padding-bottom: 50px;
+    width: 50%;
+    font-size: 1.2rem;
+}
+.formContainer{
+    display: grid;
+    gap: 2.5em;
+    width: 70%;
+    padding-bottom: 10vh;
+}
+.formGroup {
+    position: relative;
+    --color: #5757577e;
+}
+.name{
+    width: 100%;
+}
+.surname{
+    width: 100%;
+}
+.formInput{
+    width: 100%;
+    background: none;
+    color: #002145;
+    font-size: 1rem;
+    padding: .6em .3em;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--color);
+}
+.formLabel{
+    color: var(--color);
+    position: absolute;
+    top: 0;
+    left: 4px;
+    transform: translateY(10px);
+    transition: transform .3s, color .3s;
+}
+.formInput:focus + .formLabel,
+.formInput:not(:placeholder-shown) + .formLabel {
+    transform: translateY(-12px) scale(.7);
+    transform-origin: left top;
+    color: #002145;
+}
+.formSubmit {
+    background: #002145;
+    color: #fff;
+    font-weight: 300;
+    font-size: 1rem;
+    padding: .8em 0;
+    border: none;
+    border-radius: .5em;
+    transition: .5s;
+    cursor: pointer;
+    font-family: ubuntuMedium;
+    height: 50px;
+}
+.formSubmit:hover{
+    background: #001123;
+}
+.formLine{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #002145;
+    transform: scale(0);
+    transform: left bottom;
+    transition: transform .4s;
+}
+.commentsLine {
+    margin-bottom: 3px;
+}
+textarea{
+    resize: none;
+    min-height: 150px;
+}
+.formInput:focus ~ .formLine,
+.formInput:not(:placeholder-shown) + .formLine {
+    transform: scale(1);
+}
+.error {
+    color: rgb(187, 0, 0);
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.spinner{
+    border: 4px solid rgba(0, 0, 0, .1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: #002145;
+    animation: spin 1s ease infinite;
+    justify-self: center;
+}
+.success{
+    color: green;
+    font-weight: bold;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@media (max-width: 1000px) {
+    .formDesc{
+        width: 70%;
+    }
+}
+@media (max-width: 500px) {
+    .formContainer{
+        width: 80%;
+    }
+}
