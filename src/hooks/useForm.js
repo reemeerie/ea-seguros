@@ -23,7 +23,7 @@ export const useForm = (initialForm, validateForm) => {
             setLoading(true)
             axios.defaults.headers.post['Content-Type'] = 'application/json';
             try {
-                const res = await axios.post('https://formsubmit.co/ajax/thomasreemeerie0@gmail.com', form)
+                const res = await axios.post('https://formsubmit.co/ajax/unmail@mail.com', form)
                 setResponse(res)
                 setLoading(false)   
             } catch (error) {
